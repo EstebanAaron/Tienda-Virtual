@@ -8,13 +8,11 @@ form {
   max-width: 500px;
 }
 
-
 form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
-
 
 form input[type="text"],
 form input[type="number"],
@@ -26,7 +24,6 @@ form select {
   border-radius: 4px;
 }
 
-
 form textarea {
   width: 90%;
   padding: 10px;
@@ -35,7 +32,6 @@ form textarea {
   border-radius: 4px;
   height: 100px;
 }
-
 
 form button {
   background-color: #333;
@@ -47,22 +43,18 @@ form button {
   font-size: 16px;
 }
 
-
 form button:hover {
   background-color: #555;
 }
-
 
 #message {
   margin-top: 20px;
   font-size: 16px;
 }
 
-
 #message.error {
   color: red;
 }
-
 
 #message.success {
   color: green;

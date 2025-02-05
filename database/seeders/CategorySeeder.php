@@ -15,8 +15,9 @@ class CategorySeeder extends Seeder
         $categories = [
             ['name' => 'Smartphones', 'description' => 'The best smartphones'],
             ['name' => 'Laptops', 'description' => 'The best laptops'],
-            ['name' => 'Tablets', 'description' => 'The best tablets'],
-            ['name' => 'Smartwatches', 'description' => 'The best smartwatches'],
+            ['name' => 'Headphones', 'description' => 'The best headphones'],
+            ['name' => 'Appliances', 'description' => 'The best appliances'],
+            ['name' => 'Cameras', 'description' => 'The best cameras'],
         ];
 
         foreach ($categories as $category) {

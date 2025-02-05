@@ -17,7 +17,6 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
-
     /**
      * Show the form for creating a new resource.
      */
@@ -27,18 +26,15 @@ class ProductController extends Controller
         return view('products.create', compact('categories'));
     }
 
-
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         Product::create($request->all());
         return redirect()->route('products.index');
+
     }
-
-    
-
-    /**
-     * Store a newly created resource in storage.
-     */
 
     /**
      * Display the specified resource.
@@ -48,14 +44,13 @@ class ProductController extends Controller
         return view('products.show', compact('product'));
     }
 
-
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Product $product)
     {
         $categories = Category::all();
-        return view('products.edit', compact('product', 'categories'));
+        return view('products.edit', compact('product','categories'));
     }
 
     /**
@@ -75,5 +70,4 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('products.index');
     }
-
 }

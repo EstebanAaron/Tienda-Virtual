@@ -5,7 +5,6 @@ body {
   background-color: #f4f4f4;
 }
 
-
 header {
   background-color: #333;
   color: #fff;
@@ -13,11 +12,9 @@ header {
   text-align: center;
 }
 
-
 header h1 {
   margin: 0;
 }
-
 
 nav {
   background-color: #444;
@@ -26,19 +23,16 @@ nav {
   text-align: center;
 }
 
-
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-
 nav ul li {
   display: inline;
   margin: 0 15px;
 }
-
 
 nav ul li a {
   color: #fff;
@@ -46,22 +40,18 @@ nav ul li a {
   font-weight: bold;
 }
 
-
 nav ul li a:hover {
   text-decoration: underline;
 }
-
 
 main {
   padding: 20px;
   text-align: center;
 }
 
-
 main h1 {
   color: #333;
 }
-
 
 footer {
   background-color: #333;

@@ -4,9 +4,54 @@
 
 @layer components {
   .btn {
-    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded text-sm;
+    @apply bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm inline-block;
   }
+
+  .btn.danger {
+    @apply bg-red-700;
+  }
+
+  .btn.warning {
+    @apply bg-yellow-700;
+  }
+
+  .btn.success {
+    @apply bg-green-700;
+  }
+
   .table {
     @apply w-full border-collapse;
+  }
+
+  .table th {
+    @apply bg-gray-700 text-gray-200 font-bold uppercase text-sm p-2;
+  }
+
+  .table td {
+    @apply border-b border-gray-200 p-2;
+  }
+
+  .table tr:nth-child(even) {
+    @apply bg-gray-100;
+  }
+
+  .form {
+    @apply w-full max-w-sm;
+  }
+
+  .form input {
+    @apply w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 block w-full;
+  }
+
+  .form label {
+    @apply block text-gray-700 text-sm font-bold mb-2 mt-6;
+  }
+
+  .form textarea {
+    @apply w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-4 block w-full;
+  } 
+
+  .form button {
+    @apply my-3;
   }
 }
