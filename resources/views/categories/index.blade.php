@@ -10,7 +10,9 @@
           <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div class="p-6 text-gray-900">
                 <h1>Lista de Categorías</h1>
+                @if (Auth::check()&& Auth::user()->is_admin)
                 <a href="{{ route('categories.create') }}"><button class="btn">Nueva Categoría</button></a>
+                @endif
                 <table class="table">
                   <thead>
                     <tr>
@@ -28,12 +30,15 @@
                       <td>{{ $category->description }}</td>
                       <td>
                         <a href="{{ route('categories.show', $category) }}"><button class="btn">Ver</button></a>
+                        @if (Auth::check()&& Auth::user()->is_admin)
                         <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline;">
                           @csrf
                           @method('DELETE')
+                         
                           <button type="submit" class="btn danger">Eliminar</button>
                         </form>
                         <a href="{{ route('categories.edit', $category) }}"><button class="btn warning">Editar</button></a>
+                        @endif
                       </td>
                     </tr>
                     @endforeach

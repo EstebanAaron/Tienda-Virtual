@@ -14,8 +14,9 @@
               <div class="p-6 text-gray-900">
                 
                 <h1 class="text-2xl font-bold mb-4">Lista de Productos</h1>
+                @if (Auth::check()&& Auth::user()->is_admin)
                 <a href="{{ route('products.create') }}"><button class="btn">Nuevo Producto</button></a>
-                
+                @endif
                 <table class="table">
                   <thead>
                     <tr>
@@ -39,6 +40,12 @@
                       <td>{{ $product->stock }}</td>
                       <td>
                         <a href="{{ route('products.show', $product) }}"><button class="btn">Ver</button></a>
+                        <form action='{{ route("addToCart", $product)}}' method="post" class="inline">
+                          @csrf
+                          <button type="submit" class="btn">Añadir al carrito</button>
+                        </form>
+                        
+                        @if (Auth::check()&& Auth::user()->is_admin)
                         <form action="{{ route('products.destroy', $product) }}"
                           method="POST" style="display: inline;">
                           @csrf
@@ -48,6 +55,7 @@
                         <a href="{{ route('products.edit', $product) }}">
                           <button class="btn warning">Editar</button>
                         </a>
+                        @endif
                       </td>
                     </tr>
                     @endforeach

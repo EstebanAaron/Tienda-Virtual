@@ -11,4 +11,4 @@ Route::middleware(('admin'))->group(function () {
   Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
   Route::put('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
 });
-Route::get('/categories/{category}/products', [CategoryController::class, 'showProducts'])->name('categories.products');
+Route::get('/categories/{category}/products', [CategoryController::class, 'showProducts'])->name('categories.show');
