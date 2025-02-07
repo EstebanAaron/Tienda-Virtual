@@ -24,6 +24,9 @@
                     <x-nav-link :href="route('viewCart')" :active="request()->routeIs('viewCart')">
                         {{ __('Carrito') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.index')">
+                        {{ __('Pedidos') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -116,6 +119,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('viewCart')" :active="request()->routeIs('viewCart')">
                 {{ __('Carrito') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.index')">
+                {{ __('Pedidos') }}
             </x-responsive-nav-link>
         </div>
 

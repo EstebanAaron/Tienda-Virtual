@@ -40,7 +40,7 @@
                       <td>{{ $product->stock }}</td>
                       <td>
                         <a href="{{ route('products.show', $product) }}"><button class="btn">Ver</button></a>
-                        <form action='{{ route("addToCart", $product)}}' method="post" class="inline">
+                        <form action='{{ route("cart.addToCart", $product)}}' method="post" class="inline">
                           @csrf
                           <button type="submit" class="btn">Añadir al carrito</button>
                         </form>

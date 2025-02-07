@@ -35,3 +35,5 @@ require __DIR__.'/web/categories.php';
 require __DIR__.'/web/products.php';
 
 require __DIR__.'/web/cart.php';
+
+require __DIR__.'/web/order.php';

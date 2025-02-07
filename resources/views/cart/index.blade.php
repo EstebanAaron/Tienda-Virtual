@@ -47,6 +47,17 @@
                       </tr>
                     </tbody>
                   </table>
+                  @auth
+                  <form action="{{ route('orders.store') }}" method="POST" class="inline-block">
+                    @csrf
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Realizar Pedido</button>
+                  </form>
+                  @else
+                  <a href="{{ route('login') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Inicia sesión para realizar el pedido</a>
+
+                  @endauth
+
+
               </div>
           </div>
       </div>
