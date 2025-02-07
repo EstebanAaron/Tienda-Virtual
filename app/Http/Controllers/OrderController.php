@@ -13,7 +13,7 @@ class OrderController extends Controller
  public function index()
  {
      $orders = Order::with('user')->get();
-     return var_dump($orders);
+     return view('orders.index', compact('orders'));
  }
 
     public function show(Order $order)
